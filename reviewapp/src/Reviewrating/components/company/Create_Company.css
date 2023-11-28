@@ -1,0 +1,57 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.add-container{
+    height: 600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.add-company{
+    background-image: url(../../assets/Images/login1page.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    width: 350px;
+    position: absolute;
+    padding: 25px 15px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    box-shadow:  5px 5px 5px 5px;
+}
+.add-com-h1{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+.createCom-form{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.add-com-input{
+    padding: 8px 6px;
+    width: 300px;
+    min-height: 30px;
+    border: 1px solid black;
+}
+.add-btn{
+    width: 100px;
+    height: 30px;
+    padding: 5px 5px;
+    background: linear-gradient(100deg, rgb(201, 64, 246),rgb(66, 13, 146));
+    color: white;
+    border: none;
+    margin-left: 90px;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 17px;
+   
+}
+.danger-message{
+    color: red;
+}

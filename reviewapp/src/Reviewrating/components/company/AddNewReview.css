@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.add-rev-container{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+.add-review{
+    background-image: url(../../assets/Images/login1page.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    width: 400px;
+    padding: 20px 15px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    box-shadow:  5px 5px 5px 5px;
+    margin-top: 100px;
+}
+.add-rev-h1{
+    text-align: center;
+    margin-bottom: 10px;
+    /* background: linear-gradient(to right, 
+    rgb(181, 32, 235),rgb(64, 6, 151)); 
+     -webkit-text-fill-color: transparent; 
+     -webkit-background-clip: text;  */
+}
+.reviewS-star{
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 80px;
+    padding-bottom: 20px;
+}
+.review-star-img{
+    margin-left: 30px;
+    height: 55px;
+    width: 80px;
+}
+.add-rev-input1{
+    padding: 6px 6px;
+    width: 350px;
+    min-height: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.add-rating{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 10px;
+}
+.review-btn{
+    width: 100px;
+    height: 30px;
+    padding: 5px 5px;
+    background: linear-gradient(100deg, rgb(204, 64, 246),rgb(87, 14, 197));
+    color: white;
+    border: none;
+    margin-left: 140px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
