@@ -15,7 +15,6 @@ import { ForgetPassword } from './Reviewrating/components/auth/ForgetPassword';
 function App() {
   return (
     <>
-    {/* <ResetPassword/> */}
       <BrowserRouter>
         <Routes>
         <Route path='/' element = {<Login/>}></Route>
@@ -26,7 +25,7 @@ function App() {
         <Route path='/companydetail/:id' element={<CompanyDetails/>}></Route>
         <Route path='/addcompanyreview/:id' element={<AddNewReview/>}></Route>
         <Route path='/forgetpassword/' element = {<ForgetPassword/>}></Route>
-        <Route path='/user/reset-password/:id/:token' element={<ResetPassword/>}></Route>
+        <Route path='/user/reset-password/:id' element={<ResetPassword/>}></Route>
         <Route path='/*' element = {<Page404/>}></Route>
         </Routes>
       </BrowserRouter>

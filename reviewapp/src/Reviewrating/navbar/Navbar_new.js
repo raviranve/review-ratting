@@ -1,12 +1,12 @@
 import React from "react";
 import star from "../assets/Images/loginStar3new.png";
-import men from "../assets/Images/Profile Picture_1.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Navbar_new = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const res = localStorage.getItem("user");
   const user = JSON.parse(res);
+  console.log("user data", user);
 
   const handleLogout = () => {
     localStorage.clear();
@@ -19,11 +19,16 @@ export const Navbar_new = () => {
             <h1>Review&RATE</h1>
             <img className="navstar-image" src={star}></img>
           </div>
+          
           <div className="company-navright">
-            <h4 className="welcome5">Welcome : {user.name}</h4>
+          {user?.name ? (
+            <h4 className="welcome5">Welcome : {user?.name}</h4>
+          ) : (
+            navigate("/")
+          )}
             <img
               className="navmen-image"
-              src={`http://localhost:9000${user.profilepic}`}
+              src={`http://localhost:9000${user?.profilepic}`}
             ></img>
             <button className="company-logout-btn">
               <Link to="/" onClick={handleLogout}>

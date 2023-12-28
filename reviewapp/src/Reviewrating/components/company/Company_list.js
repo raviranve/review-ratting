@@ -5,7 +5,6 @@ import { getCompanies } from "../../features/company/companySlice";
 import { useDispatch, useSelector } from "react-redux";
 import { Navbar_new } from "../../navbar/Navbar_new";
 export const Company_list = () => {
-
   const companies = useSelector((state) => state.company);
   const { cmplist_msg, company_data, error, loading, count } = companies;
 
@@ -25,7 +24,6 @@ export const Company_list = () => {
           </button>
         </div>
         <div className="company-list">
-        
           {company_data &&
             company_data.map(
               ({ _id, company_logo, companyName, location, city, founded }) => (
@@ -36,7 +34,8 @@ export const Company_list = () => {
                       src={`http://localhost:9000${company_logo}`}
                     ></img>
                   </Link>
-                  <div>
+                
+                  <div className="company-detailscss">
                     <p>{companyName}</p>
 
                     <p>{location}</p>

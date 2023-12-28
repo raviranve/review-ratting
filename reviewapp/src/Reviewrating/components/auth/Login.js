@@ -20,7 +20,7 @@ export const Login = () => {
       setTimeout(() => {
         dispatch(clearState());
         navigate("/");
-      }, 1000);
+      }, 500);
     }
     if (message) {
       toast.success(message, { position: toast.POSITION.TOP_CENTER });

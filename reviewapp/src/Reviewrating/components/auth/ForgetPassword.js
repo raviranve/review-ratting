@@ -43,10 +43,10 @@ export const ForgetPassword = () => {
       <div className="resetPass-container">
         <div className="reset-password">
           <div className="reset-star">
-            <h2 className="reset-h2">Reset Password</h2>
+            <h2 className="reset-h2">Forget-Password</h2>
             <img src={star} className="reset-img"></img>
           </div>
-
+    
           <Formik
             initialValues={initialState}
             validationSchema={validationSchema}

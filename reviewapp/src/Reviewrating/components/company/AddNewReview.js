@@ -16,7 +16,7 @@ export const AddNewReview = () => {
   const dispatch = useDispatch();
 
   const review = useSelector((state) => state.review);
-  // console.log("review", review);
+  // console.log("review", review);  
   const { review_msg, loading, error } = review;
 
   useEffect(() => {
@@ -30,7 +30,7 @@ export const AddNewReview = () => {
     if (error) {
       toast.error(error, { position: toast.POSITION.TOP_CENTER });
     }
-  }, [review_msg, error]);
+  }, [review_msg, error]); 
 
   const initialState = {
     subject: "",
@@ -43,7 +43,7 @@ export const AddNewReview = () => {
     review: yup.string().required("Please enter valid review"),
     rating: yup.string().required("Please enter valid rating"),
   });
-
+ 
   function handleSubmit(values) {
     console.log("Values", values);
     let obj = {
@@ -63,6 +63,7 @@ export const AddNewReview = () => {
             <img src={star} className="review-star-img"></img>
           </div>
           <br />
+          
           <Formik
             initialValues={initialState}
             validationSchema={validationSchema}

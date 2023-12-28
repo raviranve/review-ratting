@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import "./CompanyDetails.css";
-import men from "../../assets/Images/Profile Picture_1.png";
 import { Link, useParams } from "react-router-dom";
 import { Navbar_new } from "../../navbar/Navbar_new";
 import { useDispatch, useSelector } from "react-redux";
@@ -13,7 +12,7 @@ export const CompanyDetails = () => {
   // param se Extract kari thi id param is get the url
 
   const companyData = useSelector((state) => state.company);
-
+console.log(companyData);
   const { company_details, compDetail_msg } = companyData;
   const { companyDetails, comments } = company_details;
   // console.log(CompanyDetails);

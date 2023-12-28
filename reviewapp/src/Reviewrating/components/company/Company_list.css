@@ -15,8 +15,8 @@
     box-shadow: 2px 2px 5px ;
 }
 .navstar-image{
-height: 53px;
-width: 80px;
+   height: 53px;
+   width: 80px;
 }
 .navmen-image{
     height: 50px;
@@ -91,13 +91,13 @@ width: 80px;
     margin-left: 80px;
     margin-top: 30px;
     display: flex;
+    flex-direction: row;
     gap: 25px;
     align-items: center;
     font-size: 20px;
     box-shadow: 0px 0px 7px 10px lightgray;
     background-color: white;
 }
-
 .list-image{
     height: 140px;
     padding: 20px 4px;

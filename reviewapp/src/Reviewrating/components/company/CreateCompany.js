@@ -29,9 +29,7 @@ export const CreateCompany = () => {
     setTimeout(() => {
       dispatch(clearState())
     }, 1000);
-    
   }
-  
 }, [cmpcreate_msg, error]);
 
 

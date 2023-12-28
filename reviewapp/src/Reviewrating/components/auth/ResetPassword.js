@@ -32,25 +32,29 @@ export const ResetPassword = () => {
   }, [message, error]);
 
   const initialState = {
-    newPassword: "",
-    confirmPassword: "",
+    newpassword: "",
+    confirmpassword: "",
   };
 
   const validationSchema = yup.object().shape({
-    newPassword: yup.string().required("Please enter your new password"),
-    confirmPassword: yup
+    newpassword: yup.string().required("Please enter your new password"),
+    confirmpassword: yup
       .string()
       .required("Please enter your confirm password"),
   });
 
   const handleSubmit = async (values) => {
     console.log("values", values);
+    if(values.newpassword === values.confirmpassword){
     let obj = {
       ...values,
       id: id,
       token: token,
     };
     dispatch(resetPassword(obj));
+  }else {
+    alert("Do not match password")
+  }
   };
 
   return (
@@ -70,20 +74,20 @@ export const ResetPassword = () => {
             <Form>
               <Field
                 type="password"
-                name="newPassword"
+                name="newpassword"
                 className="reset-input"
                 placeholder="&#x2709; Enter your new password"
               />
               <br />
-              <ErrorMessage name="newPassword"></ErrorMessage>
+              <ErrorMessage name="newpassword"></ErrorMessage>
               <Field
                 type="password"
-                name="confirmPassword"
+                name="confirmpassword"
                 className="reset-input"
                 placeholder="&#x2709; Enter confirm password"
               />
               <br />
-              <ErrorMessage name="confirmPassword"></ErrorMessage>
+              <ErrorMessage name="confirmpassword"></ErrorMessage>
 
               <button className="reset-btn">Reset</button>
             </Form>

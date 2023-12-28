@@ -7,8 +7,10 @@ import * as yup from "yup";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useDispatch, useSelector } from "react-redux";
+import { clearState } from "../../features/auth/authSlice";
 import { SignUpUser } from "../../features/auth/authSlice";
 export const Signup = () => {
+  const [pic, setPic] = useState("");
   const dispatch = useDispatch();
   const data = useSelector((state) => state.user);
   let { error, message, loading } = data;
@@ -19,10 +21,11 @@ export const Signup = () => {
     }
     if (message) {
       toast.success(message, { position: toast.POSITION.TOP_CENTER });
+      setTimeout(() => {
+        dispatch(clearState());
+      }, 500);
     }
   }, [error, message]);
-
-  const [pic, setPic] = useState("");
 
   const initialState = {
     name: "",

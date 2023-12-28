@@ -4,8 +4,8 @@ import axios from "axios";
 let initialState = {
   cmpcreate_msg: "",
   cmplist: "",
-  cmpDetail_msg: "",
   company_data: "",
+  cmpDetail_msg: "",
   company_details: "",
   loading: false,
   error: "",
@@ -49,7 +49,7 @@ export const createCompany = createAsyncThunk(
 export const getCompanyDetails = createAsyncThunk(
   "company/getCompanyDetails",
   async (id, thunkAPI) => {
-    // console.log("**", id);
+    console.log("**", id);
     const reResult = await fetch(
       `http://localhost:9000/company/details/${id}`,
       {
@@ -61,9 +61,9 @@ export const getCompanyDetails = createAsyncThunk(
       }
     );
     let data = await reResult.json();
-    // console.log("Data", data);
+    console.log("Data", data);
     if (data.status) {
-      //   console.log("IF", data);
+      console.log("IF", data);
       return data;
     } else {
       return thunkAPI.rejectWithValue(data);
@@ -131,7 +131,7 @@ const companySlice = createSlice({
         state.cmpcreate_msg = "";
         state.company_details = "";
       } else {
-        state.compDetail_msg = payload.message;
+        state.cmpDetail_msg = payload.message;
         state.company_details = payload.compDetails;
         state.error = "";
       }
@@ -139,7 +139,7 @@ const companySlice = createSlice({
     [getCompanyDetails.rejected]: (state, { payload }) => {
       state.loading = false;
       state.error = payload.error;
-      state.compDetail_msg = "";
+      state.cmpDetail_msg = "";
       state.company_details = "";
     },
   },
